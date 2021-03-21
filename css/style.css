@@ -260,6 +260,52 @@ body._lock {
   font-size: 22px;
 }
 
+.title-work {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 150%;
+  color: #21243d;
+}
+
+.work-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.info-work {
+  font-size: 20px;
+  line-height: 150%;
+  color: #8695a4;
+}
+
+.year {
+  width: 62px;
+  height: 25px;
+  color: white;
+  background-color: #142850;
+  border-radius: 16px;
+}
+
+.year__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.year__text {
+  font-size: 18px;
+  line-height: 139%;
+  font-weight: 900;
+  text-align: center;
+}
+
 .ibg {
   background-position: center;
   background-size: cover;
@@ -426,9 +472,9 @@ body._lock {
   font-size: 26px;
   font-weight: 700;
   line-height: 146.15385%;
-  -webkit-transition: color .3s ease 0s;
-  -o-transition: color .3s ease 0s;
-  transition: color .3s ease 0s;
+  -webkit-transition: color 0.3s ease 0s;
+  -o-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
   margin: 0 0 17px 0;
 }
 
@@ -440,6 +486,29 @@ body._lock {
 
 .recent-post__info span {
   margin: 0 10px;
+}
+
+.recent-post__text {
+  margin: 0 0 10px 0;
+}
+
+.works__title {
+  padding: 25px 0;
+}
+
+.work__avatar {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 250px;
+          flex: 0 0 250px;
+  height: 180px;
+  border-radius: 6px;
+  margin: 0 10px 0 0;
+}
+
+.work__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .footer {
