@@ -915,6 +915,7 @@ body._lock {
 @media (max-width: 370px) {
   .footer__copyright {
     font-size: 12px;
+    margin: 0 auto;
   }
 }
 @supports (-webkit-appearance:none){
