@@ -59,3 +59,52 @@ if (amountAnimItems > 0) {
 	}, 300);
 
 }
+
+function getPosition(e) {
+	var x = y = 0;
+
+	if (!e) {
+		var e = window.event;
+	}
+
+	if (e.pageX || e.pageY) {
+		x = e.pageX;
+		y = e.pageY;
+	} else if (e.clientX || e.clientY) {
+		x = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
+		y = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+	}
+	return { top: y, left: x, }
+}
+
+function getCoords(e) {
+	var box = e[0].getBoundingClientRect();
+
+	return {
+		top: box.top + pageYOffset,
+		left: box.left + pageXOffset
+	};
+}
+
+function setMargin() {
+	var elem = document.getElementsByClassName("but");
+	var start = getCoords(elem);
+	var end = getPosition(event);
+	return {
+		marginLeft: end.left - start.left,
+		marginTop: end.top - start.top
+	}
+}
+
+function CircleBig() {
+	var circle = document.getElementsByClassName("circle");
+	var margin = setMargin();
+	circle[0].setAttribute("style", `margin-left: ${margin.marginLeft}px; margin-top: ${margin.marginTop}px; top: -50px; left: -50px`);
+	setTimeout( function(e){circle[0].setAttribute("style", `margin-left: ${margin.marginLeft}px; margin-top: ${margin.marginTop}px; transition: .7s; transform: scale(420,420);`)}, 100);
+}
+
+function CircleSmoll() {
+	var circle = document.getElementsByClassName("circle");
+	circle[0].style.width = "10px";
+	circle[0].style.height = "10px";
+}
